@@ -45,11 +45,7 @@ module DataMem(
         {mem[35], mem[34], mem[33], mem[32]}    <= 32'h0000_0004;       //4
         {mem[39], mem[38], mem[37], mem[36]}    <= 32'hFFFF_FFF9;       //-7
         {mem[43], mem[42], mem[41], mem[40]}    <= 32'h0000_0000;
-        {mem[57], mem[56], mem[55], mem[54]}    <= 32'h0000_0000;
-        {mem[51], mem[50], mem[59], mem[58]}    <= 32'h0000_0000;
-        {mem[65], mem[64], mem[63], mem[62]}    <= 32'h0000_0000;
-        {mem[69], mem[68], mem[67], mem[66]}    <= 32'h0000_0000;
-        for (i = 70; i < 1048576; i = i + 1) begin
+        for (i = 44; i < 1048576; i = i + 1) begin
             mem[i] <= 8'hF0;
         end
     end
