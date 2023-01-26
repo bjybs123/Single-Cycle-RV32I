@@ -84,7 +84,7 @@ module ALU(
                                                 32'hxxxx_xxxx;
 
     
-    assign BEG = (ALUResult == 32'b0) ? 32'h0000_0001 : 32'h0000_0000;
+    assign BEQ = (ALUResult == 32'b0) ? 32'h0000_0001 : 32'h0000_0000;
     
     assign BNE = (ALUResult != 32'b0) ? 32'h0000_0001 : 32'h0000_0000;
     
@@ -96,7 +96,7 @@ module ALU(
     
     assign BGEU = (Cout == 0) ? 32'h0000_0001 : 32'h0000_0000;
     
-    assign ExeBranch =  (funct == 3'b000) ? BEG : 
+    assign ExeBranch =  (funct == 3'b000) ? BEQ : 
                         (funct == 3'b001) ? BNE : 
                         (funct == 3'b100) ? BLT : 
                         (funct == 3'b101) ? BGE : 
